@@ -15,23 +15,31 @@ let inputValue = document.querySelector('#inputValue');
 let button = document.querySelector('#calcB');
 let result = document.querySelector('#result');
 button.addEventListener("click", function() {
-    let methodName = inputMethod.value;
-    let methodValue = parseFloat(inputValue.value);
-    if(methodName!='' && methodValue!=''){
-        if (Calculate[methodName] && !isNaN(methodValue)) {
-            let methodResult = Calculate[methodName](methodValue);
-            if (methodResult !== undefined) {
-                result.textContent = `Результат ${methodName}: ${methodResult}`;
+    let methodName = inputMethod.value.trim();
+    let argsString = inputValue.value.trim();
+    let argsArray = argsString.split(',').map(arg => parseFloat(arg.trim()));
+    if(methodName!='' && argsString!=''){
+        if (Calculate[methodName]) {
+            const method = Calculate[methodName];
+
+            if (method.length === argsArray.length) {
+                const methodResult = method(...argsArray);
+                if (methodResult !== undefined) {
+                    result.textContent = `Результат ${methodName}: ${methodResult}`;
+                } else {
+                    result.textContent = `Метод ${methodName} вернул недопустимый результат.`;
+                }
+                inputMethod.value = '';
+                inputValue.value = '';
             } else {
-                result.textContent = `Метод ${methodName} вернул недопустимый результат.`;
+                result.textContent = `Введите нужное количество аргументов (${method.length}): `;
             }
         } else {
-            result.textContent = "Метод не существует или значение недопустимо.";
+            result.textContent = "Метод не существует.";
         }
-        inputMethod.value = '';
-        inputValue.value = '';
     }
 });
+
 
 let methodNames = Object.keys(Calculate);
 let pElement = document.getElementById("p");
