@@ -21,7 +21,6 @@ button.addEventListener("click", function() {
     if(methodName!='' && argsString!=''){
         if (Calculate[methodName]) {
             const method = Calculate[methodName];
-
             if (method.length === argsArray.length) {
                 const methodResult = method(...argsArray);
                 if (methodResult !== undefined) {
