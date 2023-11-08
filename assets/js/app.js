@@ -23,8 +23,6 @@ button.addEventListener("click", function() {
             const method = Calculate[methodName];
             if (method.length === argsArray.length) {
                 const methodResult = method(...argsArray);
-                console.log(methodResult)
-
                 if (!isNaN(methodResult)) {
                     result.textContent = `Результат ${methodName}: ${methodResult}`;
                 } else {
