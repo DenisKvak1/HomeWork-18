@@ -25,11 +25,11 @@ button.addEventListener("click", function() {
                 const methodResult = method(...argsArray);
                 if (!isNaN(methodResult)) {
                     result.textContent = `Результат ${methodName}: ${methodResult}`;
+                    inputMethod.value = '';
+                    inputValue.value = ''; 
                 } else {
                     result.textContent = `Вы ввели что то кроме цифр и ' , ' `;
                 }
-                inputMethod.value = '';
-                inputValue.value = '';
             } else {
                 result.textContent = `Введите нужное количество аргументов (${method.length}) через ,`;
             }
