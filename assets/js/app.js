@@ -36,7 +36,7 @@ button.addEventListener("click", function() {
 let methodNames = Object.keys(Calculate);
 let pElement = document.getElementById("p");
 if (methodNames.length > 0) {
-    pElement.innerHTML = "Методы объекта Calculate:<br>" + methodNames.join("<br>");
+    pElement.innerHTML = methodNames.join("<br>");
 } else {
     pElement.textContent = "Нет доступных методов.";
  }
