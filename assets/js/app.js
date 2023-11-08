@@ -31,7 +31,7 @@ button.addEventListener("click", function() {
                 inputMethod.value = '';
                 inputValue.value = '';
             } else {
-                result.textContent = `Введите нужное количество аргументов (${method.length}): `;
+                result.textContent = `Введите нужное количество аргументов (${method.length}) через ,`;
             }
         } else {
             result.textContent = "Метод не существует.";
