@@ -46,4 +46,4 @@ if (methodNames.length > 0) {
     pElement.innerHTML = methodNames.join("<br>");
 } else {
     pElement.textContent = "Нет доступных методов.";
- }
+}
