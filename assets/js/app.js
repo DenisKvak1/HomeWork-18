@@ -48,7 +48,6 @@ function updateInputsForFunction(func, containerId) {
 
 function populateSelectOptions(optionsArray, selectId) {
     const selectElement = document.getElementById(selectId);
-    let o = 0;
     optionsArray.forEach(optionValue => {
         const optionElement = document.createElement('option');
 
@@ -56,7 +55,6 @@ function populateSelectOptions(optionsArray, selectId) {
 
         optionElement.textContent = Calculate.Descriptions[optionValue];
         selectElement.appendChild(optionElement);
-        o++;
     });
 }
 
