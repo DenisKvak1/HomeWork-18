@@ -41,7 +41,7 @@ function updateInputsForFunction(func, containerId) {
         const selectedMethod = inputMethod.value;
         const input = document.createElement('input');
         inputContainer.appendChild(input);
-        input.classList.add('form-control', 'w-25', 'mt-2');
+        input.classList.add('form-control', 'w', 'mt-2');
         input.placeholder = (Calculate.InputPlaceholders[selectedMethod] && Calculate.InputPlaceholders[selectedMethod][index]) || "Введите значение";
     });
 }
