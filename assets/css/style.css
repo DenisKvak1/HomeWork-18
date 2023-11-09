@@ -5,8 +5,29 @@ h4{
     margin-top: 10px;
 }
 #formul{
-    width: 360px;
+    width: 100%;
 }
 .w{
-    width: 300px;
+    width: 100%;
 }
+.container >div{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+@media (min-width: 450px) { 
+    .w,#formul{
+        width: 80%;
+    }
+    .container >div{
+        width: 80%;
+    }
+ }
+ @media (min-width: 560px) { 
+    .w,#formul{
+        width: 400px;
+    }
+    .container >div{
+        width: 400px;
+    }
+ }
