@@ -60,6 +60,8 @@ function populateSelectOptions(optionsArray, selectId) {
 
 let button = document.querySelector('#calcB');
 let result = document.querySelector('#result');
+let inputMethod = document.querySelector('#formul');
+
 button.addEventListener("click", function () {
     const selectMethod = inputMethod.value;
     const inputContainer = document.getElementById('input-block');
@@ -73,7 +75,6 @@ button.addEventListener("click", function () {
     }
 });
 
-let inputMethod = document.querySelector('#formul');
 inputMethod.addEventListener('change', function () {
     const selectedMethod = inputMethod.value;
     if (Calculate[selectedMethod]) {
