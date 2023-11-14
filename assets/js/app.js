@@ -68,9 +68,13 @@ button.addEventListener("click", function () {
     const inputContainer = document.getElementById('input-block');
     const inputElements = inputContainer.querySelectorAll('input');
     const argsArray = Array.from(inputElements).map(input => parseFloat(input.value.trim()));
-    result.textContent = `Результат: ${Calculate[selectMethod](...argsArray)}`;
+    if(isNaN(Calculate[selectMethod](...argsArray))){
+        result.textContent = `Введите корректные данные :)`;
+    }
+    else{
+        result.textContent = `Результат: ${Calculate[selectMethod](...argsArray)}`;
+    }
 });
-
 inputMethod.addEventListener('change', function () {
     const selectedMethod = inputMethod.value;
     if (Calculate[selectedMethod]) {
