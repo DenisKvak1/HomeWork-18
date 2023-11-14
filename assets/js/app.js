@@ -1,13 +1,13 @@
 let Calculate = {
     SquarePerimeter: (side) =>  (side * 4).toFixed(2) ,
-    CubeVolume: (edge) => (Math.pow(edge, 3)).toFixed(2),
-    CubeSideSurfaceArea: (edge) =>(4 * Math.pow(edge, 2)).toFixed(2),
+    CubeVolume: (edge) => (edge**3).toFixed(2),
+    CubeSideSurfaceArea: (edge) =>(4 * edge**2).toFixed(2),
     СircumFerence: (radius) => (2 * radius * Math.PI).toFixed(2),
-    AreaOfCircle: (radius) =>(Math.PI * Math.pow(radius, 2)).toFixed(2),
+    AreaOfCircle: (radius) =>(Math.PI * radius**2).toFixed(2),
     MaterialDensity: (volume, mass) =>(mass / volume).toFixed(2),
     PopulationDensity: (population, area) => (population / area).toFixed(2),
-    Hypotenuse: (a, b) => Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2)).toFixed(2),
-    CalculateY: (a) => (Math.pow(a, 2) + 10 / Math.sqrt(Math.pow(a, 2) + 1)).toFixed(2),
+    Hypotenuse: (a, b) => Math.sqrt(a**2 + b**2).toFixed(2),
+    CalculateY: (a) => (a**2 + 10 / Math.sqrt(a**2 + 1)).toFixed(2),
     Descriptions: {
         SquarePerimeter: "Периметр Квадрата",
         CubeVolume: "Объем Куба",
