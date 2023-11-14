@@ -7,7 +7,7 @@ let Calculate = {
     MaterialDensity: (volume, mass) => Math.round(mass / volume * 100) / 100,
     PopulationDensity: (population, area) => Math.round(population / area * 100) / 100,
     Hypotenuse: (a, b) => Math.round(Math.sqrt(a**2 + b**2) * 100) / 100,
-    CalculateY: (a) => Math.round((a**2 + 10 / Math.sqrt(a**2 + 1)) * 100) / 100,
+    CalculateY: (a) => Math.round(((a**2 + 10) / Math.sqrt(a**2 + 1)) * 100) / 100,
     Descriptions: {
         SquarePerimeter: "Периметр Квадрата",
         CubeVolume: "Объем Куба",
