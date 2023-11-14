@@ -1,13 +1,13 @@
 let Calculate = {
-    SquarePerimeter: (side) =>  (side * 4).toFixed(2) ,
-    CubeVolume: (edge) => (edge**3).toFixed(2),
-    CubeSideSurfaceArea: (edge) =>(4 * edge**2).toFixed(2),
-    СircumFerence: (radius) => (2 * radius * Math.PI).toFixed(2),
-    AreaOfCircle: (radius) =>(Math.PI * radius**2).toFixed(2),
-    MaterialDensity: (volume, mass) =>(mass / volume).toFixed(2),
-    PopulationDensity: (population, area) => (population / area).toFixed(2),
-    Hypotenuse: (a, b) => Math.sqrt(a**2 + b**2).toFixed(2),
-    CalculateY: (a) => (a**2 + 10 / Math.sqrt(a**2 + 1)).toFixed(2),
+    SquarePerimeter: (side) => Math.round((side * 4) * 100) / 100,
+    CubeVolume: (edge) => Math.round((edge**3) * 100) / 100,
+    CubeSideSurfaceArea: (edge) => Math.round(4 * edge**2 * 100) / 100,
+    СircumFerence: (radius) => Math.round(2 * radius * Math.PI * 100) / 100,
+    AreaOfCircle: (radius) => Math.round(Math.PI * radius**2 * 100) / 100,
+    MaterialDensity: (volume, mass) => Math.round(mass / volume * 100) / 100,
+    PopulationDensity: (population, area) => Math.round(population / area * 100) / 100,
+    Hypotenuse: (a, b) => Math.round(Math.sqrt(a**2 + b**2) * 100) / 100,
+    CalculateY: (a) => Math.round((a**2 + 10 / Math.sqrt(a**2 + 1)) * 100) / 100,
     Descriptions: {
         SquarePerimeter: "Периметр Квадрата",
         CubeVolume: "Объем Куба",
@@ -31,7 +31,6 @@ let Calculate = {
         CalculateY: ["Введите значение a для вычисления Y"],
     },
 }
-
 function updateInputsForFunction(func, containerId) {
     const inputContainer = document.getElementById(containerId);
     const argNames = func.toString().match(/\(([^)]+)\)/)[1].split(',').map(arg => arg.trim());
