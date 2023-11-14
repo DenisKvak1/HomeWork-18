@@ -1,7 +1,7 @@
 let Calculate = {
     SquarePerimeter: (side) => Math.round((side * 4) * 100) / 100,
     CubeVolume: (edge) => Math.round((edge**3) * 100) / 100,
-    CubeSideSurfaceArea: (edge) => Math.round(4 * edge**2 * 100) / 100,
+    CubeSideSurfaceArea: (edge) => Math.round((4 * edge**2) * 100) / 100,
     СircumFerence: (radius) => Math.round(2 * radius * Math.PI * 100) / 100,
     AreaOfCircle: (radius) => Math.round(Math.PI * radius**2 * 100) / 100,
     MaterialDensity: (volume, mass) => Math.round(mass / volume * 100) / 100,
